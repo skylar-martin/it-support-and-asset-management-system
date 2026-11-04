@@ -1,0 +1,46 @@
+/* Scoped ticket editing styles; respects the existing blue-and-cream theme. */
+.ticket-row-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ticket-edit-button, .ticket-edit-cancel { border: 1px solid #9fb3c2; background: #f7f5ee; color: #263e58; border-radius: 9px; padding: 9px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+.ticket-edit-button:hover, .ticket-edit-cancel:hover { background: #e8edf0; }
+.ticket-edit-form { margin-top: 22px; padding: 22px; border: 1px solid #d9e1e2; border-radius: 14px; background: #fffdf7; display: grid; gap: 16px; }
+.ticket-edit-heading h3 { margin: 0 0 5px; color: #263e58; }
+.ticket-edit-heading p { margin: 0; color: #667687; }
+.ticket-edit-form .employee-field { min-width: 0; }
+.ticket-edit-form input, .ticket-edit-form select, .ticket-edit-form textarea { width: 100%; box-sizing: border-box; }
+.ticket-edit-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 700px) { .ticket-edit-form { padding: 15px; } }
+
+/* Modal edit form: hidden until the user selects Edit on a ticket. */
+.ticket-edit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 35, 52, .64);
+  backdrop-filter: blur(4px);
+}
+.ticket-edit-dialog {
+  width: min(100%, 650px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 16px;
+  box-shadow: 0 24px 70px rgba(16, 28, 42, .34);
+  background: #fffdf7;
+}
+.ticket-edit-dialog .ticket-edit-form {
+  margin: 0;
+  border: 0;
+  border-radius: 16px;
+  padding: 26px;
+}
+.ticket-edit-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
+.ticket-edit-close { flex: 0 0 auto; border: 0; border-radius: 8px; background: #e8edf0; color: #263e58; width: 36px; height: 36px; font-size: 26px; line-height: 1; cursor: pointer; }
+.ticket-edit-close:hover { background: #d7e2e9; }
+@media (max-width: 700px) {
+  .ticket-edit-overlay { padding: 12px; }
+  .ticket-edit-dialog { max-height: calc(100vh - 24px); }
+  .ticket-edit-dialog .ticket-edit-form { padding: 18px; }
+}

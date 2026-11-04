@@ -3,3 +3,25 @@
 ################################################################################
 
 /.vs
+# .NET build files
+**/bin/
+**/obj/
+**/.vs/
+
+# React build files
+**/node_modules/
+**/dist/
+
+# Local database files
+*.mdf
+*.ldf
+
+# Uploaded attachments
+**/uploads/
+**/Uploads/
+
+# Secrets
+.env
+.env.*
+**/appsettings.Development.json
+*.csproj.user

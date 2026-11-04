@@ -1,0 +1,93 @@
+/* Slate Blue & Warm Cream — global visual system. Imported last in App.jsx. */
+:root { font-family: Inter, "Segoe UI", Arial, sans-serif; color:#293b4d; background:#f6f3e9; --sage:#52728f; --sage-deep:#263e58; --sage-soft:#e5edf4; --cream:#f6f3e9; --paper:#fffdf7; --ink:#293b4d; --muted:#6e7d8b; --line:#d9e1e7; --focus:#668ba9; }
+html { scroll-behavior:smooth; }
+body, #root { background:var(--cream); color:var(--ink); }
+.app-layout { background:var(--cream); }
+.app-layout > .sidebar { background:#263e58; color:#f7f4e9; border-right:1px solid #3e5973; }
+.sidebar .brand { color:#fffaf0; }
+.sidebar .brand-icon { background:#7697b5; color:#fff; }
+.sidebar .brand small { color:#d7e4ef; }
+.sidebar .dashboard-navigation .dashboard-nav-parent { color:#e5edf4; }
+.sidebar .dashboard-navigation .dashboard-nav-parent:hover { background:#355775; color:#fff; }
+.sidebar .dashboard-navigation .dashboard-nav-parent.is-active { background:#476c8d; color:#fff; box-shadow:inset 3px 0 #f2d9a4; }
+.sidebar .dashboard-navigation .nav-parent-icon { color:#d7e6f3; }
+.sidebar .dashboard-navigation .nav-chevron { color:#d7e6f3; }
+.sidebar .dashboard-navigation .dashboard-nav-children { border-left-color:#64839e; }
+.sidebar .dashboard-navigation .dashboard-nav-child { color:#dbe6f0; }
+.sidebar .dashboard-navigation .dashboard-nav-child:hover { background:#355775; color:#fff; }
+.sidebar .dashboard-navigation .dashboard-nav-child.is-active { background:#5e83a4; color:#fff; }
+.app-layout > .main-content { background:var(--cream); color:var(--ink); }
+.app-layout > .main-content > .topbar { background:#fffcf5; border-bottom:1px solid var(--line); color:#4b6276; }
+.topbar select { background:#fffdf7; color:var(--ink); border:1px solid #c8d6e1; border-radius:10px; padding:10px 14px; }
+.dashboard { width:100%; max-width:1500px; margin:0 auto; padding:32px clamp(18px,3vw,44px); }
+.page-heading { display:block; margin-bottom:26px; }
+.page-heading h1 { color:#263e58; font-size:clamp(25px,2.4vw,34px); margin:0 0 8px; letter-spacing:-.7px; }
+.page-heading p { color:#738394; margin:0; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(195px,1fr)); gap:16px; margin-bottom:24px; }
+.stat-card { display:flex; flex-direction:column; align-items:flex-start; gap:7px; background:var(--paper); border:1px solid var(--line); border-radius:15px; padding:22px 24px; box-shadow:0 4px 16px #263e5810; }
+.stat-card span { color:#6f8090; font-size:13px; font-weight:650; margin:0; }
+.stat-card strong { color:#3e6588; font-size:31px; line-height:1.15; }
+.panel { background:var(--paper); border:1px solid var(--line); border-radius:15px; margin-bottom:22px; padding:0; overflow:hidden; box-shadow:0 4px 16px #263e5810; }
+.panel > h2 { color:#304a63; padding:22px 25px 17px; margin:0; font-size:19px; }
+.panel .table-wrap { overflow-x:auto; }
+.panel table { width:100%; border-collapse:collapse; font-size:13px; }
+.panel th { background:#eaf0f4; color:#4e667a; text-align:left; text-transform:uppercase; letter-spacing:.6px; font-size:11px; padding:15px 18px; }
+.panel td { color:#45596b; padding:16px 18px; border-top:1px solid #e4e9ed; vertical-align:middle; }
+.panel tbody tr:hover { background:#f3f6f8; }
+.demo-badge { border-radius:999px; padding:6px 11px; font-weight:750; }
+.priority-low,.status-resolved,.asset-active { background:#dcebd8; color:#356b43; }
+.priority-medium,.status-in-progress,.asset-repair { background:#f7e9bb; color:#876322; }
+.priority-high,.asset-retired { background:#f6d9d3; color:#a43e36; }
+.status-open { background:#dfe8ed; color:#426c7a; }
+.status-editor { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.status-editor .demo-badge { min-width:110px; justify-content:center; }
+.status-editor select { width:145px; min-width:145px; height:42px; margin:0; }
+button, input, select, textarea { font:inherit; }
+.dashboard input:not([type=checkbox]), .dashboard select, .dashboard textarea, .topbar select { background:#fffef9; color:var(--ink); border:1px solid #c8d6e1; border-radius:10px; padding:11px 14px; min-height:44px; box-sizing:border-box; }
+.dashboard input::placeholder,.dashboard textarea::placeholder { color:#8b98a3; }
+.dashboard input:hover,.dashboard select:hover,.dashboard textarea:hover,.topbar select:hover { border-color:#91adc4; }
+.dashboard input:focus,.dashboard select:focus,.dashboard textarea:focus,.topbar select:focus { outline:none; border-color:var(--focus); box-shadow:0 0 0 3px #8bacc655; }
+.dashboard .primary-action,.dashboard .employee-submit-button { background:#527b9d; border:1px solid #527b9d; color:#fff; border-radius:10px; font-weight:750; min-height:44px; padding:11px 18px; }
+.dashboard .primary-action:hover,.dashboard .employee-submit-button:hover:not(:disabled) { background:#3d6588; border-color:#3d6588; }
+.dashboard .edit-button { background:#e6eef5; color:#355d7d; border:1px solid #c9d9e6; }
+.dashboard .edit-button:hover { background:#d9e7f1; }
+.dashboard .danger-button { background:#fbede9; color:#a2443a; border:1px solid #f0d1cb; }
+.dashboard .danger-button:hover { background:#f6dfd8; }
+.inventory-heading { padding:22px 25px 17px; margin:0; }
+.inventory-heading h2 { color:#304a63; font-size:19px; }
+.inventory-tools input { min-width:250px; }
+.asset-modal-backdrop { background:#172a3db3; }
+.asset-modal { background:var(--paper); color:var(--ink); border:1px solid #d9e1e7; border-radius:17px; padding:30px; box-shadow:0 22px 80px #14263855; }
+.asset-modal h2 { color:#263e58; margin-bottom:23px; }
+.asset-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+.asset-form label { display:flex; flex-direction:column; gap:8px; color:#52687a; font-size:13px; font-weight:700; }
+.asset-form label:first-child,.asset-form label:last-of-type,.asset-modal-actions { grid-column:1/-1; }
+.asset-form input,.asset-form select { width:100%; background:#fffef9; color:var(--ink); border:1px solid #c8d6e1; border-radius:10px; padding:12px 14px; min-height:46px; }
+.asset-form input:focus,.asset-form select:focus { outline:none; border-color:var(--focus); box-shadow:0 0 0 3px #8bacc655; }
+.asset-modal-actions { display:flex; justify-content:flex-end; gap:10px; padding-top:10px; }
+.asset-modal .primary-action { background:#527b9d; border:1px solid #527b9d; color:white; border-radius:10px; padding:11px 17px; }
+.asset-modal .edit-button { background:#e6eef5; color:#355d7d; border:1px solid #c9d9e6; border-radius:10px; padding:11px 17px; }
+/* Employee form overrides: same controls as admin, no dark blue remnants. */
+.employee-ticket-panel .employee-ticket-header { padding:24px 26px 0; }
+.employee-ticket-panel .employee-ticket-header h2 { color:#304a63; }
+.employee-ticket-panel .employee-ticket-header p { color:#778899; }
+.employee-ticket-panel .employee-ticket-form { max-width:920px; }
+.employee-ticket-panel .employee-field label { color:#52687a; }
+.employee-ticket-panel .employee-field label span { color:#b64d44; }
+.employee-ticket-panel .employee-ticket-form .employee-field input,
+.employee-ticket-panel .employee-ticket-form .employee-field select,
+.employee-ticket-panel .employee-ticket-form .employee-field textarea { background:#fffef9; color:var(--ink); border-color:#c8d6e1; border-radius:10px; }
+.employee-ticket-panel .employee-ticket-form .employee-field input:focus,
+.employee-ticket-panel .employee-ticket-form .employee-field select:focus,
+.employee-ticket-panel .employee-ticket-form .employee-field textarea:focus { background:#fffef9; border-color:var(--focus); box-shadow:0 0 0 3px #8bacc655; }
+.employee-ticket-panel .employee-ticket-form .employee-field select option { background:#fffef9; color:var(--ink); }
+.employee-ticket-panel .employee-priority-note { color:#738394; }
+.error { color:#a43e36; background:#fff0ea; border:1px solid #e8c3b8; border-radius:10px; padding:12px; margin-bottom:16px; }
+@media(max-width:750px){ .dashboard{padding:22px 15px;} .stats{grid-template-columns:repeat(2,minmax(0,1fr));} .asset-form{grid-template-columns:1fr;} .inventory-heading{align-items:flex-start;} .inventory-tools{width:100%;} .inventory-tools input{min-width:0;flex:1;} }
+@media(max-width:480px){ .stats{grid-template-columns:1fr;} .status-editor{flex-wrap:wrap;} }
+
+/* Distinct ticket statuses against the blue navigation */
+.status-open { background:#fff0cf; color:#8a5b12; }
+.status-in-progress { background:#eee5f8; color:#7046a0; }
+.status-resolved { background:#dcebdc; color:#2d7146; }
+/* Preserve warm cream surfaces and make the theme consistent. */

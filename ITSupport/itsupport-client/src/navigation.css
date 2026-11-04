@@ -1,0 +1,53 @@
+/* Scoped navigation styles: does not replace existing dashboard/theme CSS. */
+.sidebar .dashboard-navigation { display:flex; flex-direction:column; gap:5px; }
+.sidebar .dashboard-navigation button { font:inherit; cursor:pointer; }
+.sidebar .dashboard-navigation .dashboard-nav-parent { display:flex; align-items:center; gap:11px; width:100%; border:0; border-radius:9px; padding:12px 13px; background:transparent; color:#c1d0e5; font-size:13px; font-weight:650; text-align:left; }
+.sidebar .dashboard-navigation .dashboard-nav-parent:hover { background:#1b304f; color:white; }
+.sidebar .dashboard-navigation .dashboard-nav-parent.is-active { background:#25466e; color:#fff; box-shadow:inset 3px 0 #5c98ff; }
+.sidebar .dashboard-navigation .nav-parent-icon { width:20px; font-size:17px; text-align:center; color:#91b8fa; flex-shrink:0; }
+.sidebar .dashboard-navigation .nav-chevron { margin-left:auto; font-size:19px; color:#9bb0cb; }
+.sidebar .dashboard-navigation .dashboard-nav-children { display:flex; flex-direction:column; gap:3px; padding:2px 0 9px 22px; margin-left:20px; border-left:1px solid #39506e; }
+.sidebar .dashboard-navigation .dashboard-nav-child { width:100%; display:block; border:0; border-radius:7px; padding:10px 12px; text-align:left; color:#a8bbd5; background:transparent; font-size:12px; font-weight:500; }
+.sidebar .dashboard-navigation .dashboard-nav-child:hover { background:#203753; color:white; }
+.sidebar .dashboard-navigation .dashboard-nav-child.is-active { background:#1f3c60; color:#fff; font-weight:700; }
+#employee-devices, #employee-tickets, #admin-tickets, #admin-inventory { scroll-margin-top:20px; }
+@media (max-width:700px) { .sidebar .dashboard-navigation .dashboard-nav-children { margin-left:12px; padding-left:12px; } }
+
+/* Fix class mismatch between the current App.jsx and original App.css. */
+.app-layout {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100%;
+}
+.app-layout > .sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 255px;
+  flex: 0 0 255px;
+  overflow-y: auto;
+  align-self: flex-start;
+}
+.app-layout > .main-content {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+}
+.app-layout > .main-content > .topbar {
+  width: 100%;
+}
+@media (max-width: 1050px) and (min-width: 701px) {
+  .app-layout > .sidebar { width: 210px; flex-basis: 210px; }
+}
+@media (max-width: 700px) {
+  .app-layout { display: block; }
+  .app-layout > .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .app-layout > .main-content { width: 100%; }
+}

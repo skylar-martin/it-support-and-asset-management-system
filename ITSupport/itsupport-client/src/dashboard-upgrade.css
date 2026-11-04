@@ -1,0 +1,29 @@
+/* Dashboard enhancement: colored priorities, statuses, asset CRUD */
+.demo-badge{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:700;white-space:nowrap;background:#edf2f7;color:#475569}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0}
+.priority-low,.status-resolved,.asset-active{background:#dcfce7;color:#166534}
+.priority-medium,.status-in-progress,.asset-repair{background:#fef3c7;color:#92400e}
+.priority-high,.asset-retired{background:#fee2e2;color:#b91c1c}
+.status-open{background:#dbeafe;color:#1d4ed8}
+.priority-preview{display:flex;align-items:center;gap:10px;font-size:13px;color:#64748b}
+.danger-button,.edit-button,.primary-action{border-radius:8px;padding:9px 13px;font-weight:650;cursor:pointer;font-size:13px}
+.danger-button{background:#fff1f2;color:#be123c;border:1px solid #fecdd3}
+.danger-button:hover{background:#ffe4e6}
+.edit-button{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.edit-button:hover{background:#dbeafe}
+.primary-action{background:#2563eb;color:#fff;border:1px solid #2563eb}
+.primary-action:hover{background:#1d4ed8}
+.danger-button:disabled,.edit-button:disabled,.primary-action:disabled{opacity:.55;cursor:not-allowed}
+.asset-actions,.status-editor,.inventory-tools{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.status-editor select{border:1px solid #cbd5e1;border-radius:7px;padding:8px;background:white;color:#334155}
+.inventory-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.inventory-heading h2{margin:0}
+.inventory-tools input{border:1px solid #cbd5e1;border-radius:8px;padding:10px 12px;min-width:245px;color:#0f172a;background:white}
+.asset-modal-backdrop{position:fixed;inset:0;background:#0f172a9c;z-index:100;display:grid;place-items:center;padding:18px}
+.asset-modal{width:min(100%,490px);max-height:90vh;overflow:auto;background:white;color:#0f172a;border-radius:15px;padding:26px;box-shadow:0 20px 60px #0003}
+.asset-modal h2{margin:0 0 20px;font-size:23px}
+.asset-form{display:grid;gap:14px}
+.asset-form label{display:grid;gap:6px;font-size:13px;font-weight:650;color:#334155}
+.asset-form input,.asset-form select{border:1px solid #cbd5e1;border-radius:8px;padding:11px;background:white;color:#0f172a;width:100%}
+.asset-modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}
+@media(max-width:700px){.inventory-tools{width:100%}.inventory-tools input{min-width:0;flex:1}}

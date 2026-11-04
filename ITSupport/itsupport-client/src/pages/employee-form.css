@@ -1,0 +1,37 @@
+/* Scoped to employee ticket submission; does not modify the dashboard layout or theme. */
+.employee-ticket-panel { overflow: visible; }
+.employee-ticket-header { padding: 24px 28px 0; }
+.employee-ticket-header h2 { margin: 0 0 6px; font-size: 20px; letter-spacing: -.3px; }
+.employee-ticket-header p { margin: 0; color: #8c9bb1; font-size: 13px; }
+.employee-ticket-form { display: grid; gap: 20px; max-width: 820px; padding: 25px 28px 30px; }
+.employee-form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.employee-field { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.employee-field label { font-size: 13px; font-weight: 700; color: #aebed6; }
+.employee-field label span { color: #f87171; }
+.employee-ticket-form .employee-field input,
+.employee-ticket-form .employee-field select,
+.employee-ticket-form .employee-field textarea {
+  display: block; width: 100%; min-width: 0; box-sizing: border-box;
+  padding: 13px 15px; min-height: 48px; margin: 0;
+  border: 1px solid #34465d; border-radius: 10px;
+  background: #172335; color: #edf3fb; font: inherit; font-size: 14px;
+  outline: none; transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.employee-ticket-form .employee-field input::placeholder,
+.employee-ticket-form .employee-field textarea::placeholder { color: #8293aa; opacity: 1; }
+.employee-ticket-form .employee-field select { cursor: pointer; padding-right: 35px; }
+.employee-ticket-form .employee-field select option { background: #172335; color: #edf3fb; }
+.employee-ticket-form .employee-field textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+.employee-ticket-form .employee-field input:hover,
+.employee-ticket-form .employee-field select:hover,
+.employee-ticket-form .employee-field textarea:hover { border-color: #5b7290; }
+.employee-ticket-form .employee-field input:focus,
+.employee-ticket-form .employee-field select:focus,
+.employee-ticket-form .employee-field textarea:focus { border-color: #5c9cff; box-shadow: 0 0 0 3px #3b82f633; background: #1a2a40; }
+.employee-priority-note { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; color: #94a3b8; font-size: 12px; }
+.employee-form-actions { display: flex; justify-content: flex-end; padding-top: 3px; }
+.employee-ticket-form .employee-submit-button { border: 1px solid #2563eb; background: #2563eb; color: white; border-radius: 10px; padding: 13px 23px; min-height: 46px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s ease, transform .15s ease; }
+.employee-ticket-form .employee-submit-button:hover:not(:disabled) { background: #1d4ed8; }
+.employee-ticket-form .employee-submit-button:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+.employee-ticket-form .employee-submit-button:disabled { opacity: .6; cursor: wait; }
+@media (max-width: 650px) { .employee-form-row { grid-template-columns: 1fr; } .employee-ticket-header { padding: 20px 18px 0; } .employee-ticket-form { padding: 20px 18px 24px; } .employee-form-actions .employee-submit-button { width: 100%; } }
